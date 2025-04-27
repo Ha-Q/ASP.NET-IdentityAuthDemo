@@ -1,6 +1,7 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
 [Oo]bj/
+App_Data/
 
 # Logs
 Logs/
@@ -43,6 +44,8 @@ x64/
 *.vspscc
 *.vssscc
 .builds
+*.mdf
+*.ldf
 
 # Visual C++ cache files
 ipch/

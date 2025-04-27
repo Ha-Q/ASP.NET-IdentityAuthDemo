@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using IdentityAuthDemo.Models;
+using Owin.Security.Providers.GitHub;
 
 namespace IdentityAuthDemo
 {
@@ -44,6 +45,8 @@ namespace IdentityAuthDemo
             // Once you check this option, your second step of verification during the login process will be remembered on the device where you logged in from.
             // This is similar to the RememberMe option when you log in.
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
+            app.UseGitHubAuthentication(clientId: "to be provided", 
+                clientSecret: "to be provided");
 
             // Uncomment the following lines to enable logging in with third party login providers
             //app.UseMicrosoftAccountAuthentication(
@@ -55,8 +58,8 @@ namespace IdentityAuthDemo
             //   consumerSecret: "");
 
             app.UseFacebookAuthentication(
-               appId: "Will provide in the env config",
-               appSecret: "Will provide in the env config");
+               appId: "to be provided",
+               appSecret: "to be provided");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
